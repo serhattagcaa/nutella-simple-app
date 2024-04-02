@@ -31,12 +31,13 @@
             <p class="w-[50px] h-2 {currentState === 1 ?  'bg-red-800': 'bg-gray-200'} rounded-lg" />
             <p class="w-[50px] h-2 {currentState === 2 ?  'bg-red-800': 'bg-gray-200'} rounded-lg" />
           </div>
-      </div>
-      <img class="midcolor" src="/src/assets/Midcolor.svg" alt="" />
+        </div>   
+    <div class="float-right">  
+        <img class="midcolor" src="/src/assets/Midcolor.svg" alt="" />
       {#if currentState === 0}
       <div id="oneimg">
-          <img class="freseight" src="/src/assets/freseight.png" alt="" />
-          <img class="strawberry" src="/src/assets/strawberry.svg" alt="" />
+        <img class="freseight" src="/src/assets/freseight.png" alt="" />  
+        <img class="strawberry" src="/src/assets/strawberry.svg" alt="" />
           <img class="midstrawberry" src="/src/assets/midstrawberry.svg" alt="" />
           <img class="platepan" src="src/assets/platepan.png" alt="" />
           <img class="vectorone" src="src/assets/vectorone.png" alt="" />
@@ -51,15 +52,17 @@
         <div>
             <img src="/src/assets/midstrawberry.svg" alt="">
         </div>
-      {/if}
+      {/if} </div>
     </div>
   </main>
   
 <style>
+
+
 .midcolor {
     position: relative;
     float: right;
-    bottom: 300px;
+    top:-300px;
 }
 
 .freseight {
@@ -67,7 +70,7 @@
     float: right; /* Yeni eklenen özellik */
     width: 88.78px;
     height: 56.67px;
-    animation-name: freselocal;
+    animation-name: freselocal;  
     animation-duration: 1s;
     animation-fill-mode: forwards; /* Animasyon bitiminde son durumu korur */
     animation-timing-function: ease-in-out; /* Animasyonun başlangıç ve sonunda yavaşlama */
@@ -129,7 +132,7 @@
 } 
 
 .platepan {
-    position: relative;
+    position: relative;    
     width: 366px; /* Başlangıçta genişlik */
     height: 315px; /* Başlangıçta yükseklik */
     float: right;
@@ -169,25 +172,25 @@
 }
 @keyframes nutellaglasslocal {
     0% {
-        opacity: 0; /* %0'da opasiteyi ayarlayın */
+        opacity: 0;
         width: 75.85116px; 
         height: 88.13012px;
         left: 810px;
         top: -340px;
-        transform: rotate(45deg); /* %0'da 45 derece dönüş */
-        animation-timing-function: ease-out; /* Başlangıçta yavaş */
+        transform: rotate(45deg);
+        animation-timing-function: ease-out;
     }
     100% {
-        opacity: 1; /* %100'de opasiteyi ayarlayın */
-        width: 108.3588px; /* Yeni genişlik değeri */
-        height: 125.9016px;  /* Yeni yükseklik değeri */
+        opacity: 1;
+        width: 108.3588px;
+        height: 125.9016px;
         left: 810px;
         top: -340px;
-        transform: rotate(0deg); /* %100'de 0 derece dönüş */
-        animation-timing-function: ease-in; /* Sonunda hızlı */
+        transform: rotate(0deg);
+        animation-timing-function: ease-in;
     }
 }
- 
+
 .vectorone{
     position: relative;
     float: right;
