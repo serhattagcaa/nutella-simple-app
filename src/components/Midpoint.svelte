@@ -1,60 +1,70 @@
 <script>
-    let currentState = 0;
-  
-    const changeState = () => {
-      currentState = (currentState + 1) % 3;
-      setTimeout(changeState, 6000);
-    }
-  
+  let currentState = 0;
+
+  const changeState = () => {
+    currentState = (currentState + 1) % 3;
     setTimeout(changeState, 6000);
-  </script>
-  
-  <main>
-    <div>
-        <div class="relative pl-28 top-[200px]">
-            {#if currentState === 0}
-              <h1 class="font-montserrat font-[600] text-[64px] text-[#1F1F1F]" id="onetext">Pankek Keyfini</h1>
-            {:else if currentState === 1}
-              <h1 class="font-montserrat font-[600] text-[64px] text-[#1F1F1F]" id="twotext">Ramazan Keyfini</h1>
-            {:else}
-              <h1 class="font-montserrat font-[600] text-[64px] text-[#1F1F1F]" id="threetext">Kahve Keyfini</h1>
-            {/if}
+  }
+
+  setTimeout(changeState, 6000);
+  import Midcolor from  "../assets/Midcolor.svg";
+  import Freseight from "../assets/freseight.png";
+  import Strawberry from "../assets/strawberry.svg";
+  import Midstrawberry from "../assets/midstrawberry.svg";
+  import Platepan from "../assets/platepan.png";
+  import Vectorone from "../assets/vectorone.png";
+  import Nutellaglass from "../assets/nutellaglass.png";
+  import Twostrawberry from "../assets/twostrawberry.svg";
+</script>
+
+<main>
+  <div>
+    <div class="relative pl-28 top-[200px]">
+      {#if currentState === 0}
+        <h1 class="font-montserrat font-[600] text-[64px] text-[#1F1F1F]" id="onetext">Pankek Keyfini</h1>
+      {:else if currentState === 1}
+        <h1 class="font-montserrat font-[600] text-[64px] text-[#1F1F1F]" id="twotext">Ramazan Keyfini</h1>
+      {:else}
+        <h1 class="font-montserrat font-[600] text-[64px] text-[#1F1F1F]" id="threetext">Kahve Keyfini</h1>
+      {/if}
       <h1 class="font-montserrat font-[600] text-[64px] text-[#1F1F1F]">Nutella İle Taçlandır</h1>
       <p class="relative top-[15px] font-montserrat font-[500] text-[#1F1F1F] text-[20px]">
-          Nutella ile eğlenceli günler için hazırlayabileceğiniz <br> daha o kadar çok yaratıcı tarif var ki!
-        </p>
-        <button class="relative top-[60px] font-montserrat font-[500] w-52 h-14 rounded-[15px] text-white bg-[#E3001A]">
-          Tarifi Görüntüle
-        </button>
-        <div class="relative top-[200px] flex space-x-8">
-            <p class="w-[50px] h-2 {currentState === 0 ?  'bg-red-800': 'bg-gray-200'} rounded-lg" />
-            <p class="w-[50px] h-2 {currentState === 1 ?  'bg-red-800': 'bg-gray-200'} rounded-lg" />
-            <p class="w-[50px] h-2 {currentState === 2 ?  'bg-red-800': 'bg-gray-200'} rounded-lg" />
-          </div>
-        </div>   
+        Nutella ile eğlenceli günler için hazırlayabileceğiniz <br> daha o kadar çok yaratıcı tarif var ki!
+      </p>
+      <button class="relative top-[60px] font-montserrat font-[500] w-52 h-14 rounded-[15px] text-white bg-[#E3001A]">
+        Tarifi Görüntüle
+      </button>
+      <div class="relative top-[200px] flex space-x-8">
+        <p class="w-[50px] h-2 {currentState === 0 ?  'bg-red-800': 'bg-gray-200'} rounded-lg" />
+        <p class="w-[50px] h-2 {currentState === 1 ?  'bg-red-800': 'bg-gray-200'} rounded-lg" />
+        <p class="w-[50px] h-2 {currentState === 2 ?  'bg-red-800': 'bg-gray-200'} rounded-lg" />
+      </div>
+    </div>   
     <div class="float-right">  
-        <img class="midcolor" src="/src/assets/Midcolor.svg" alt="" />
+      <img class="midcolor" src={Midcolor} alt="" />
       {#if currentState === 0}
-      <div id="oneimg">
-        <img class="freseight" src="/src/assets/freseight.png" alt="" />  
-        <img class="strawberry" src="/src/assets/strawberry.svg" alt="" />
-          <img class="midstrawberry" src="/src/assets/midstrawberry.svg" alt="" />
-          <img class="platepan" src="src/assets/platepan.png" alt="" />
-          <img class="vectorone" src="src/assets/vectorone.png" alt="" />
-          <img class="nutellaglass" src="src/assets/nutellaglass.png" alt="" />
-          <img class="twostrawberry" src="/src/assets/twostrawberry.svg" alt="" />
+        <div id="oneimg">
+          <img class="freseight" src={Freseight} alt="" />  
+          <img class="strawberry" src={Strawberry} alt="" />
+          <img class="midstrawberry" src={Midstrawberry} alt="" />
+          <img class="platepan" src={Platepan} alt="" />
+          <img class="vectorone" src={Vectorone} alt="" />
+          <img class="nutellaglass" src={Nutellaglass} alt="" />
+          <img class="twostrawberry" src={Twostrawberry} alt="" />
         </div>
-        {:else if currentState === 1}
+      {:else if currentState === 1}
         <div id="twoimg">
-          <img src="/src/assets/twostrawberry.svg" alt="">
+          <img src={Twostrawberry} alt="">
         </div>
-        {:else}
+      {:else}
         <div>
-            <img src="/src/assets/midstrawberry.svg" alt="">
+          <img src={Midstrawberry} alt="">
         </div>
-      {/if} </div>
+      {/if}
     </div>
-  </main>
+  </div>
+</main>
+
   
 <style>
 
