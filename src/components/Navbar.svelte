@@ -1,5 +1,6 @@
 <script>
  import Nutella from "../assets/nutella.png" 
+ import searchButton from "../assets/search.svg"
  
 </script>
 <main>
@@ -13,7 +14,7 @@
     <div class="flex pr-40 pt-11 space-x-8 relative">
       <div class="searchBox">
         <input id="searchInput" class="font-montserrat font-[500]" type="text" name="İnput" placeholder="Search">
-        <img class="searchButton" src="/src/assets/search.svg" alt="">
+        <img src={searchButton} alt="A jar of SearchButton">
       </div>
       <a class="font-montserrat font-[500]" href="/nutellacontent">Nutella'nın içinde</a>
       <a class="font-montserrat font-[500]" href="/recipes">Tarifler</a>
