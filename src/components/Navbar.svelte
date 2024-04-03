@@ -1,8 +1,13 @@
+<script>
+ import Nutella from "../assets/nutella.png" 
+ 
+</script>
 <main>
   <nav class="flex items-center justify-between h-36">
     <div class="pl-28">
       <a href="/">
-        <img src="/src/assets/nutella.png" alt="" width="178" height="133">
+        <img src={Nutella} alt="A jar of Nutella" width="178" height="133">
+
       </a>
     </div>
     <div class="flex pr-40 pt-11 space-x-8 relative">
