@@ -10,7 +10,6 @@ This is my first frontend project where I developed a Nutella-themed website wit
 
 ## 🎯 Project Highlights
 - Pixel-perfect alignment for a clean and precise UI.
-- Responsive design that works across different devices and screen sizes.
 - Animated elements to enhance the user experience.
 - Custom theme for Nutella with Ramadan season-specific content.
 
