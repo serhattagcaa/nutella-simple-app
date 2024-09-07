@@ -9,7 +9,7 @@
   setTimeout(changeState, 6000);
 
   
-  import Midcolor from  "../assets/Midcolor.svg";
+  import Midcolor from  "../assets/Midcolor.png";
   import Freseight from "../assets/freseight.png";
   import Strawberry from "../assets/strawberry.svg";
   import Midstrawberry from "../assets/midstrawberry.svg";
@@ -390,8 +390,8 @@ height: 100%;
   position: relative;
   top:-300px;
   -webkit-mask-image: url(src/assets/Midcolor.png);
-  mask-image: url(src/assets/Midcolor.svg);
-  mask-image: url(src/assets/Midcolor.svg);
+  mask-image: url(src/assets/Midcolor.png);
+  mask-image: url(src/assets/Midcolor.png);
   -webkit-mask-repeat: no-repeat;
   mask-repeat: no-repeat;    
   z-index:1;
