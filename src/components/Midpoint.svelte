@@ -17,10 +17,23 @@
   import Vectorone from "../assets/vectorone.png";
   import Nutellaglass from "../assets/nutellaglass.png";
   import Twostrawberry from "../assets/twostrawberry.svg";
-  import Onfreelight from "../assets/onfreelight.svg";
-  import Rightfreelight from "../assets/rightfreelight.svg";
-  import Topfrelight from "../assets/topfrelight.svg"
-</script>
+  import Onfreelightsvg from "../assets/onfreelight.svg";
+  import Onfreelightpng from "../assets/onfreelight.png" ;
+  import Rightfreelightsvg from "../assets/rightfreelight.svg";
+  import Rightfreelightpng from "../assets/rightfreelight.png";
+  import Topfrelight from "../assets/topfrelight.svg";
+  import Rightramadanlight from "../assets/rightramadanlight.png";
+  import Leftramamdanlight from "../assets/leftramadanlight.png";
+  import Vectortwo from "../assets/vectortwo.png";
+  import Ramadanhurma from "../assets/ramadanhurma.png";
+  import Kahveone from "../assets/kahveone.png";
+  import Kahvebardak from "../assets/kahvebardak.png";
+  import Kahvekayip from "../assets/kahvekayip.png";
+  import Duman from "../assets/duman.png";
+  import Kakvealt from "../assets/kahvealt.png";
+  import HardDeepkahve from "../assets/boşlukhardcoffe.png"
+  import App from "../App.svelte";
+  </script>
 
 <main>
   <div>
@@ -40,35 +53,70 @@
         Tarifi Görüntüle
       </button>
       <div class="relative top-[200px] flex space-x-8">
-        <p class="w-[50px] h-2 {currentState === 0 ?  'bg-red-800': 'bg-gray-200'} rounded-lg" />
-        <p class="w-[50px] h-2 {currentState === 1 ?  'bg-red-800': 'bg-gray-200'} rounded-lg" />
-        <p class="w-[50px] h-2 {currentState === 2 ?  'bg-red-800': 'bg-gray-200'} rounded-lg" />
+        <button
+          class="w-[50px] h-2 rounded-lg {currentState === 0 ? 'bg-red-800' : 'bg-gray-200'}"
+          on:click={() => currentState = 0}
+        ></button>
+        <button
+          class="w-[50px] h-2 rounded-lg {currentState === 1 ? 'bg-red-800' : 'bg-gray-200'}"
+          on:click={() => currentState = 1}
+        ></button>
+        <button
+          class="w-[50px] h-2 rounded-lg {currentState === 2 ? 'bg-red-800' : 'bg-gray-200'}"
+          on:click={() => currentState = 2}
+        ></button>
       </div>
     </div>   
     <div class="float-right" >  
-      <img class="midcolor" src={Midcolor} alt="" />
       {#if currentState === 0}
-        <div id="oneimg">
-          <img class="freseight" src={Freseight} alt="" />  
-          <img class="strawberry" src={Strawberry} alt="" />
-          <img class="midstrawberry" src={Midstrawberry} alt="" />
-        
-          <img class="platepan" src={Platepan} alt="" />
-          <img class="vectorone" src={Vectorone} alt="" />
-          <img class="nutellaglass" src={Nutellaglass} alt="" />
-        
-          <img class="twostrawberry" src={Twostrawberry} alt="" />
-          <img class="onfreelight" src={Onfreelight} alt="" />
-          <img class="rightfreelight" src={Rightfreelight} alt="" />         
-          <img class="topfrelight" src={Topfrelight} alt="" />
+        <div class="twoimg">
+          <div class="midcolortwo">
+          <img class="midcolortwolite" src={Midcolor} alt="" />
+          <img class="onfreelight" src={Onfreelightpng} alt="" />
+          <img class="rightfreelightpp" src="{Rightfreelightpng}"  alt="">
+          </div>
+          <div class="twoimgin">
+            <img class="topfrelightppfirst" src="{Topfrelight}"  alt=""> 
+            <img class="freseight" src={Freseight} alt="" />  
+            <img class="strawberry" src={Strawberry} alt="" />
+            <img class="midstrawberry" src={Midstrawberry} alt="" />
+            <img class="platepan" src={Platepan} alt="" />
+            <img class="vectorone" src={Vectorone} alt="" />
+            <img class="nutellaglass" src={Nutellaglass} alt="" /> 
+            <img class="twostrawberry" src={Twostrawberry} alt="" />
+          </div>
         </div>
       {:else if currentState === 1}
-        <div id="twoimg">
-          <img src={Twostrawberry} alt="">
+        <div class="twoimg">
+          <div class="midcolortwo">
+          <img class="midcolortwolite" src={Midcolor} alt="" />
+          <img class="leftramadanlight" src={Leftramamdanlight} alt="">
+          <img class="rightramadanlight" src={Rightramadanlight} alt="">
+          <img src="{Onfreelightpng}" class="onramadanlight" alt="">
+          <img src="{Rightfreelightpng}"  class="rightfreeramadanlight" alt="">
+          <img src="{Topfrelight}" class="topramadanlight" alt="">  
+        </div>
+        <div class="twoimgin">
+          <img class="ramadanhurma" src="{Ramadanhurma}" alt=""/>
+          <img class="vectortwo" src="{Vectortwo}" alt=""/>
+        </div>
+           <div>
+         <img class="frestwoeight" src={Freseight} alt="" />
+        </div>
         </div>
       {:else}
-        <div>
-          <img src={Midstrawberry} alt="">
+        <div class="twoimg">
+          <div class="midcolortwo">
+            <img class="midcolortwolite" src={Midcolor} alt="" />
+            <img src={Kahveone} alt="" class="kahveone">
+            <img src={Kahvekayip} alt="" class="kahvekayip">
+            <img src={Kakvealt} alt="" class="kahvealt">
+          </div>
+        </div>
+        <div class="twoimgin">
+          <img src={Kahvebardak} class="kahvebardak" alt="">
+          <img src={Duman} class="duman" alt="">
+          <img src={HardDeepkahve} class="hardcoffe" alt="">
         </div>
       {/if}
     </div>
@@ -78,259 +126,601 @@
   
 <style>
 
-
-.midcolor {
-    position: relative;
-    float: right;
-    top:-300px;
-}
-
-.freseight {
-    position: relative;
-    float: right; /* Yeni eklenen özellik */
-    left: -570px; 
-    top: -550px;
+.freseight{
+  position: relative;
+    transform: rotate(10deg);
+    left: -750px;
+    top: -1700px;
     width: 88.78px;
     height: 56.67px;
-    animation: freseightone ease-in 0.7s forwards, freseighttwo 0.7s ease-out 5s forwards;
+    animation: 
+    freseightone 0.7s cubic-bezier(0.66, 0, 0.34, 1) forwards,
+    freseighttwo 0.7s cubic-bezier(0.25, 0.1, 0.25, 1) 5s forwards;
   }
 
   @keyframes freseightone {
-      100% {
-        left: -450px; top: -220px;
-      }
+    100% {
+      left: -640px;
+      top: -1359px;
     }
-
-    @keyframes freseighttwo {
-      100% {
-        left: -550px;
-         top: -220px;
-         transform: rotate(33deg);
-         opacity:0.5;
-      }
-    }
-
-    .strawberry {
-  position: relative;
-  float: right;
-  width: 100px;
-  height: 135px;
-  top: -285px;
-  left: 250px;
-  animation: strawberryone ease-in 0.7s forwards, strawberrytwo 0.7s ease-out 5s forwards;
 }
 
-@keyframes strawberryone {
-  100% {
-    left: 180px;
-    top: -100px;
-  }
+.strawberry{
+  position: absolute;
+  top: -1450px;
+  left: 50px;
+  animation: 
+  strawberryone 0.7s cubic-bezier(0.66, 0, 0.34, 1) forwards,
+  strawberrytwo 0.7s cubic-bezier(0.25, 0.1, 0.25, 1) 5s forwards; 
+}
+ @keyframes strawberryone {
+  100% { 
+  top: -1280px;
+  left: -30px;
+    }
 }
 
 @keyframes strawberrytwo {
+  100% { 
+  top: -1800px;
+  left: 170px;
+  transform: rotate(400deg) scale(0.001) ;
+  }
+}
+
+.midstrawberry{
+ position: absolute;
+ top: -1170px;
+ left: -150px;
+ animation: 
+ midstrawberryone 0.7s cubic-bezier(0.66, 0, 0.34, 1) forwards,
+ midstrawberrytwo 0.7s cubic-bezier(0.25, 0.1, 0.25, 1) 5s forwards; 
+}
+ @keyframes midstrawberryone {
+  100% { 
+    top: -1100px;
+    left: -130px;
+  }
+}
+
+@keyframes midstrawberrytwo {
   100% {
-    left: 550px;
-    top: -550px;
-    transform: rotate(66deg);
-    width: 57.14px;
-    height: 77.14px;
+  top: 500px;
+  left: -500px;
+  transform: rotate(-400deg) scale(0.001);
   }
 }
-.midstrawberry {
-    position: relative;
-    float: right; /* Yeni eklenen özellik */
-    width: 123px;
-    height: 110px;
-    animation: midstrawone ease-in 0.7s forwards, midstrawtwo 1s ease-out 5s forwards;
-    left: 150px; top:50px;
 
+.twostrawberry{
+  position: absolute;
+  top: -900px;
+  left: 90px;
+ animation: 
+ twostrawberryone 0.7s cubic-bezier(0.66, 0, 0.34, 1) forwards,
+ twostrawberrytwo 0.7s cubic-bezier(0.25, 0.1, 0.25, 1) 5s forwards;   
 }
 
-@keyframes midstrawone {
-    
-    100% {left: 180px; top:100px;}
+@keyframes twostrawberryone {
+  100% { 
+   top: -1070px;
+   left: 10px;
+   }
 }
 
-@keyframes midstrawtwo {
-    
-    100% {
-      transform: rotate(-60deg);
-      left: 90px;
-      top: 990px; 
-      width: 49.2px;
-      height: 45px;
-    }
-}
-
-/* iç içe geçimiş yapı */
-.twostrawberry {
-    position: relative;
-    float: right; /* Yeni eklenen özellik */
-    width: 125px;
-    height: 110px;
-    animation: twostrawone ease-in 0.7s forwards, twostrawtwo 1s ease-out 5s forwards;
-    left: 700px;
-    top: -100px;
-}
- 
-@keyframes twostrawone {
-     100% {left: 580px; top: -320px;}  
-} 
-
-@keyframes twostrawtwo{
-     100% {
-      transform: rotate(60deg);
-      left: 1000px;
-      top: 500px;
-      width:50px; 
-      height: 44px;
-    }  
-}
-
-.platepan {
-    position: relative;    
-    width: 366px; /* Başlangıçta genişlik */
-    height: 315px; /* Başlangıçta yükseklik */
-    float: right;
-    opacity: 0; /* Başlangıçta opasiteyi ayarlayın */
-    opacity: 0; /* %0'da opasiteyi ayarlayın */
-    left: 800px;
-    top: -100px;
-    transform: rotate(45deg); /* %0'da 45 derece dönüş */
-    animation-timing-function: ease-out; /* Başlangıçta yavaş */
-    animation: platepanone ease-in 0.7s forwards, platepantwo 1s ease-out 5s forwards;
-}
-
-@keyframes platepanone{
-    100% {
-        opacity: 1; /* %100'de opasiteyi ayarlayın */
-        width: 523px; /* %100'de genişlik */
-        height: 450px; /* %100'de yükseklik */
-        left: 800px;
-        top: -100px;
-        transform: rotate(0deg); /* %100'de 0 derece dönüş */
-        animation-timing-function: ease-in; /* Sonunda hızlı */
-    }
+@keyframes twostrawberrytwo {
+  100% {
+  top: 500px;
+  left: 600px;
+  transform: rotate(400deg) scale(0.001);
   }
-
-  @keyframes platepantwo{
-    100% {
-        opacity: 1; /* %100'de opasiteyi ayarlayın */
-        width: 523px; /* %100'de genişlik */
-        height: 450px; /* %100'de yükseklik */
-        left: 800px;
-        top: -100px;
-        transform: rotate(0deg); /* %100'de 0 derece dönüş */
-        animation-timing-function: ease-in; /* Sonunda hızlı */
-    }
-  }
+}
+.platepan{
+ position: absolute;
+ top: -1290px;
+ left: -40px;
+}
 
 .nutellaglass{
-    position: relative;
-    float: right;
-    width: 75.85116px; 
-    height: 88.13012px;
-    animation-name:nutellaglasslocal;
-    animation-duration: 1s;
-    animation-fill-mode: forwards; /* Animasyon bitiminde son durumu korur */
-    animation-timing-function: ease-in-out;
-}
-@keyframes nutellaglasslocal {
-    0% {
-        opacity: 0;
-        width: 75.85116px; 
-        height: 88.13012px;
-        left: 810px;
-        top: -340px;
-        transform: rotate(45deg);
-        animation-timing-function: ease-out;
-    }
-    100% {
-        opacity: 1;
-        width: 108.3588px;
-        height: 125.9016px;
-        left: 810px;
-        top: -340px;
-        transform: rotate(0deg);
-        animation-timing-function: ease-in;
-    }
+position: absolute;
+ top: -1065px;
+ left: 325px;
 }
 
 .vectorone{
-    position: relative;
-    float: right;
-    width: 243.6px;
-    height: 237.3px;
-    animation-name:vectoronelocal;
-    animation-duration: 1s;
-    animation-fill-mode: forwards; /* Animasyon bitiminde son durumu korur */
-    animation-timing-function: ease-in-out;
-}
-@keyframes vectoronelocal{
-    0% {
-        opacity: 0; /* %0'da opasiteyi ayarlayın */
-        width: 243.6px;
-        height: 237.3px;
-        left: 450px;
-        top: -520px;
-        transform: rotate(45deg); /* %0'da 45 derece dönüş */
-        animation-timing-function: ease-out; /* Başlangıçta yavaş */
-    }
-    100% {
-        opacity: 1; /* %100'de opasiteyi ayarlayın */
-        width: 348px;
-        height: 339px; /* %0'da yükseklik */
-        left: 450px;
-        top: -520px;
-        transform: rotate(0deg); /* %100'de 0 derece dönüş */
-        animation-timing-function: ease-in; /* Sonunda hızlı */
-    }
-}
-.onfreelight{
-  position: relative;
-    float: right; /* Yeni eklenen özellik */
-    width: 95px;
-    height: 85px;
-    animation-name: onfreelightlocal;
-    animation-duration: 1s;
-    animation-fill-mode: forwards; /* Animasyon bitiminde son durumu korur */
-    animation-timing-function: ease-in-out;
+position: absolute;
+ top: -1263px;
+ left: 100px;
 }
 
-@keyframes onfreelightlocal {
-     0% {left: 1400px; top: -560px;}
-     100% {left: 1121px; top: -560px;}  
-} 
+.topfrelightppfirst{
+  position: absolute;
+  top: 1500px;
+  left: 10px;
+  z-index: 2;
+  transform: scale(1.1);
+  animation: 
+  topfrelightppfirstone 0.7s cubic-bezier(0.66, 0, 0.34, 1) forwards,
+  topfrelightpptwo 0.7s cubic-bezier(0.25, 0.1, 0.25, 1) 5s forwards; 
+}
+
+@keyframes topfrelightppfirstone{
+  100%{
+  top: -866px;
+  left: 200px;
+  }
+}
+
+@keyframes topfrelightpptwo{
+  100%{
+  top: -866px;
+  left: 200px;
+  }
+}
+.topfrelightpp{
+  position: absolute;
+  top: 600px;
+  left: 200px;
+  z-index: 2;
+  transform: scale(1.1);
+  
+}
+
+.rightfreelightpp{
+  position: absolute;
+  top: 800px;
+  left: 500px;
+  z-index: 2;
+  transform: scale(0.5);
+  animation: 
+  rightfreelightone 0.7s cubic-bezier(0.66, 0, 0.34, 1) forwards,
+  rightfreelighttwo 0.7s cubic-bezier(0.25, 0.1, 0.25, 1) 5s forwards;     
+  }
+
+@keyframes rightfreelightone{
+  100%{
+    top: 600px;
+    left: 465px;
+  }
+}
+ 
+@keyframes rightfreelighttwo{
+  100%{
+    top: 600px;
+    left: 465px;
+  }
+}
+.onfreelight{
+  position: absolute;
+  left: 500px;
+  top: 120px;
+  z-index: 2;
+  transform: scale(0.55);
+  opacity: 0.5;
+  animation: 
+  onfreelightone 0.7s cubic-bezier(0.66, 0, 0.34, 1) forwards,
+  onfreelighttwo 0.7s cubic-bezier(0.25, 0.1, 0.25, 1) 5s forwards;   
+}
+
+@keyframes onfreelightone {
+  100% { 
+    opacity: 1;
+    top: 120px; 
+    left: 420px;
+  }
+}
+
+@keyframes onfreelighttwo {
+  100% {
+    top: 120px; 
+    left: 420px;
+    opacity: 1;
+  }
+}
+
+
+.leftramadanlight {
+  position: absolute;
+  transform: rotate(15deg);
+  top: -160px;
+  left: 210px;
+  width: 170.57px;
+  height: 323.14px;
+  z-index: 2;
+  animation: 
+    leftramadanlightone 0.7s cubic-bezier(0.66, 0, 0.34, 1) forwards,
+    leftramadanlighttwo 0.7s cubic-bezier(0.25, 0.1, 0.25, 1) 5s forwards;
+}
+
+@keyframes leftramadanlightone {
+  100% {
+    transform: rotate(0deg);
+    top: 20px;
+    left: 165px;
+    width: 170.57px;
+    height: 323.14px;
+  }
+}
+
+@keyframes leftramadanlighttwo {
+  100% {
+    top: -250px;
+    left: 165px;
+    width: 170.57px;
+    height: 323.14px;
+  }
+}
 
 .topfrelight{
   position: relative;
-    float: right; /* Yeni eklenen özellik */
+    float: right; 
+    left: 200px;
+    top: 200px;
     width:106.875px;
     height: 136.875px;
-    animation-name: topfrelightlocal;
+    /* animation-name: topfrelightlocal; */
     animation-duration: 1s;
     animation-fill-mode: forwards; /* Animasyon bitiminde son durumu korur */
     animation-timing-function: ease-in-out;
 }
-@keyframes topfrelightlocal{
+/* @keyframes topfrelightlocal{
      0% {left: 1050px; top: 500px;}  
      100% {left: 1050px; top: -180px;}  
-} 
+}  */
 
 .rightfreelight{
   position: relative;
-    float: right; /* Yeni eklenen özellik */
+    float: right; 
     width: 73px;
     height: 67px;
-    animation-name: rightfreelightlocal;
+    top: 200px;
+    left:200px;
+    /* animation-name: rightfreelightlocal; */
     animation-duration: 1s;
-    animation-fill-mode: forwards; /* Animasyon bitiminde son durumu korur */
+    animation-fill-mode: forwards; 
     animation-timing-function: ease-in-out;
 }
-@keyframes rightfreelightlocal{  
-  0% {left: 1500px; top: -160px;}     
+/* @keyframes rightfreelightlocal{  
+  0% {left: 1600px; top: -160px;}     
   100% {left: 1216px; top: -160px;}  
-} 
+}  */
+.frestwoeight {
+    position: relative;
+    transform: rotate(10deg);
+    left: -640px;
+    top: -1086px;
+    width: 88.78px;
+    height: 56.67px;
+    opacity: 0.5;
+    animation: 
+    frestwoightone 0.7s cubic-bezier(0.66, 0, 0.34, 1) forwards,
+    frestwoighttwo 0.7s cubic-bezier(0.25, 0.1, 0.25, 1) 5s forwards;
+    filter: sepia(1.5) saturate(2.5) hue-rotate(-3deg) brightness(0.9);
+}
+
+@keyframes frestwoightone {
+    100% {
+        transform: rotate(33deg) scale(0.8);
+        opacity: 1;
+        left: -800px;
+        top: -1086px;
+    }
+}
+
+/* @keyframes frestwoighttwo {
+    100% {
+        transform: rotate(33deg);
+        opacity: 0.7;
+    }
+} */
+.twoimg{
+position: relative;
+width: 100%;
+height: 100%;
+}
+
+.midcolortwo{
+  position: relative;
+  top:-300px;
+  -webkit-mask-image: url(src/assets/Midcolor.svg);
+  mask-image: url(src/assets/Midcolor.svg);
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;    
+  z-index:1;
+}
+
+.midcolortwolite{
+position: relative;
+z-index: 1;
+}
+.leftramadanlight {
+  position: absolute;
+  transform: rotate(15deg);
+  top: -160px;
+  left: 210px;
+  width: 170.57px;
+  height: 323.14px;
+  z-index: 2;
+  animation: 
+    leftramadanlightone 0.7s cubic-bezier(0.66, 0, 0.34, 1) forwards,
+    leftramadanlighttwo 0.7s cubic-bezier(0.25, 0.1, 0.25, 1) 5s forwards;
+}
+
+@keyframes leftramadanlightone {
+  100% {
+    transform: rotate(0deg);
+    top: 20px;
+    left: 165px;
+    width: 170.57px;
+    height: 323.14px;
+  }
+}
+
+@keyframes leftramadanlighttwo {
+  100% {
+    top: -250px;
+    left: 165px;
+    width: 170.57px;
+    height: 323.14px;
+  }
+}
+
+/* Real Left */
+.rightramadanlight {
+  position: absolute;
+  transform: rotate(-40deg);
+  top: -400px;
+  left: -50px;
+  width: 195.8px;
+  height: 630.3px;
+  z-index: 2;
+  animation: 
+    rightramadanlightone 0.7s cubic-bezier(0.66, 0, 0.34, 1) forwards,
+    rightramadanlighttwo 0.7s cubic-bezier(0.25, 0.1, 0.25, 1) 5s forwards;
+}
+
+@keyframes rightramadanlightone {
+  100% {
+    transform: rotate(0deg);
+    top: -350px;
+    left: 20px;
+    width: 195.8px;
+    height: 630.3px;
+  }
+}
+
+@keyframes rightramadanlighttwo {
+  100% {
+    top: -600px;
+    left: 20px;
+    width: 195.8px;
+    height: 630.3px;
+  }
+}
+.twoimgin{
+  position: relative;
+  top:300px;
+  z-index: 2;
+}
+.ramadanhurma{
+  position: absolute;
+  top: -1060px;
+  left: -170px;
+  transform: scale(1.8);
+}
+.vectortwo{
+  position: absolute;
+  top: -1290px;
+  left: -190px;
+  transform: rotate(-117deg) scale(0.72);
+}
+/* .lightfamilytwo{
+  position: relative;
+  top:-200px;
+  left: 200px;
+  z-index: 3;
+} */
+.onramadanlight{
+  position: absolute;
+  transform:  rotate(100deg) scale(0.45);
+  top: 580px;
+  left: 450px;
+  filter: sepia(1.5) saturate(2.5) hue-rotate(-3deg) brightness(0.9);
+  z-index: 2;
+  animation: 
+  onramadanlightone 0.7s cubic-bezier(0.66, 0, 0.34, 1) forwards,
+  onramadanlighttwo 0.7s cubic-bezier(0.25, 0.1, 0.25, 1) 5s forwards; 
+}
+
+@keyframes onramadanlightone{
+  100% {
+    top: 580px;
+    left: 450px;
+    transform: rotate(5deg) scale(0.40);
+  }
+}
+/* @keyframes onramadanlighttwo{
+  100% {
+    top: 580px;
+    left: 450px;
+  transform: scale(0.55);
+  }
+} */
 
 
+
+.rightfreeramadanlight{
+  top: 135px; 
+  left: 445px;
+  transform: rotate(-100deg) scale(0.70);
+  filter: sepia(1.5) saturate(2.5) hue-rotate(-3deg) brightness(0.9);
+  position: absolute;
+  opacity: 0.5;
+  z-index: 2;
+  animation: 
+  rightfreeramadanlightone 0.7s cubic-bezier(0.66, 0, 0.34, 1) forwards,
+  rightfreeramadanlighttwo 0.7s cubic-bezier(0.25, 0.1, 0.25, 1) 5s forwards; 
+}
+@keyframes rightfreeramadanlightone{
+  100% {
+  top: 120px;
+  left: 400px;
+  opacity: 1;
+  transform: scale(0.55);
+  }
+}
+
+@keyframes rightfreeramadanlighttwo{
+  100%{
+  opacity: 1;
+  top: 120px;
+  left: 400px;
+  transform: scale(0.55);
+  }
+}
+
+.topramadanlight{
+  position: absolute;
+  top: 600px;
+  left: 200px;
+  z-index: 2;
+  transform: scale(1.1);
+  filter: sepia(1.5) saturate(2.5) hue-rotate(-3deg) brightness(0.9);
+  opacity: 0.5;
+  animation: 
+  topramadanlightone 0.7s cubic-bezier(0.66, 0, 0.34, 1) forwards,
+  topramadanlighttwo 0.7s cubic-bezier(0.25, 0.1, 0.25, 1) 5s forwards; 
+}
+
+@keyframes topramadanlightone {
+  100% {
+  opacity: 1;
+  top: 650px;
+  left: 300px;
+  transform: rotate(101deg);
+
+  }
+}
+
+@keyframes topramadanlighttwo {
+  100% {
+  top: 650px;
+  left: 300px;
+
+  }
+}
+
+.kahveone{
+  position: absolute;
+  top: 160px;
+  left: 450px;
+  z-index: 2;
+  opacity: 0.5;
+  animation: 
+  kahveoneone 0.7s cubic-bezier(0.66, 0, 0.34, 1) forwards,
+  kahveonetwo 0.7s cubic-bezier(0.25, 0.1, 0.25, 1) 5s forwards; 
+}
+
+@keyframes kahveoneone {
+  100% {
+    opacity: 1;
+    top: 160px;
+    left: 450px;
+  }
+}@keyframes kahveonetwo {
+  100% {
+    opacity: 1;
+    top: 160px;
+    left: 450px;
+  }
+}
+.kahvekayip{
+  position: absolute;
+  z-index: 2;
+  top: 650px;
+  left: 510px;
+  opacity: 0.5;
+  animation: 
+  kahvekayipone 0.7s cubic-bezier(0.66, 0, 0.34, 1) forwards,
+  kahvekayiptwo 0.7s cubic-bezier(0.25, 0.1, 0.25, 1) 5s forwards; 
+}
+@keyframes kahvekayipone {
+  100% {
+  top: 650px;
+  left: 510px;
+  opacity: 1;
+
+  }
+}
+@keyframes kahvekayiptwo {
+  100% {
+  top: 650px;
+  left: 510px;
+  opacity: 1;
+
+  }
+}
+.kahvebardak{
+  position: absolute;
+  top:-1430px;
+  left: -30px;
+}
+
+.duman{
+  position: absolute;
+  top:-1430px;
+  left: -90px;
+}
+
+.kahvealt{
+  position: absolute;
+  z-index: 2;
+  opacity: 0.5;
+  top: 660px;
+  left: 310px;
+  animation: 
+  kahvealtone 0.7s cubic-bezier(0.66, 0, 0.34, 1) forwards,
+  kahvealttwo 0.7s cubic-bezier(0.25, 0.1, 0.25, 1) 5s forwards; 
+  
+}
+@keyframes kahvealtone {
+  100% {
+  top: 660px;
+  left: 310px;
+  opacity: 1;
+  }
+}
+@keyframes kahvealttwo {
+  100% {
+  top: 660px;
+  left: 310px;
+  opacity: 1;
+
+  }
+}
+.hardcoffe{
+  position: relative;
+  left: -780px;
+  top: -1360px;
+  transform: scale(1.2);
+  opacity: 0.5;
+  animation: 
+  hardcoffeone 0.7s cubic-bezier(0.66, 0, 0.34, 1) forwards,
+  hardcoffetwo 0.7s cubic-bezier(0.25, 0.1, 0.25, 1) 5s forwards; 
+  
+}
+@keyframes hardcoffeone {
+  100% {
+    left: -780px;
+    top: -1360px;
+  opacity: 1;
+  }
+}
+@keyframes hardcoffetwo {
+  100% {
+    left: -780px;
+    top: -1360px;
+  opacity: 1;
+
+  }
+}
 </style>
