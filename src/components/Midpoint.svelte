@@ -350,39 +350,7 @@ position: absolute;
   }
 }
 
-.topfrelight{
-  position: relative;
-    float: right; 
-    left: 200px;
-    top: 200px;
-    width:106.875px;
-    height: 136.875px;
-    /* animation-name: topfrelightlocal; */
-    animation-duration: 1s;
-    animation-fill-mode: forwards; /* Animasyon bitiminde son durumu korur */
-    animation-timing-function: ease-in-out;
-}
-/* @keyframes topfrelightlocal{
-     0% {left: 1050px; top: 500px;}  
-     100% {left: 1050px; top: -180px;}  
-}  */
 
-.rightfreelight{
-  position: relative;
-    float: right; 
-    width: 73px;
-    height: 67px;
-    top: 200px;
-    left:200px;
-    /* animation-name: rightfreelightlocal; */
-    animation-duration: 1s;
-    animation-fill-mode: forwards; 
-    animation-timing-function: ease-in-out;
-}
-/* @keyframes rightfreelightlocal{  
-  0% {left: 1600px; top: -160px;}     
-  100% {left: 1216px; top: -160px;}  
-}  */
 .frestwoeight {
     position: relative;
     transform: rotate(10deg);
@@ -421,7 +389,8 @@ height: 100%;
 .midcolortwo{
   position: relative;
   top:-300px;
-  -webkit-mask-image: url(src/assets/Midcolor.svg);
+  -webkit-mask-image: url(src/assets/Midcolor.png);
+  mask-image: url(src/assets/Midcolor.svg);
   mask-image: url(src/assets/Midcolor.svg);
   -webkit-mask-repeat: no-repeat;
   mask-repeat: no-repeat;    
