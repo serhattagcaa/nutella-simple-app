@@ -19,10 +19,13 @@ Clone the repository:
 git clone https://github.com/serhattagcaa/nutella-simple-app.git
 
 Navigate to the project directory:
+
 cd nutella-simple-app
 
 Install the dependencies:
+
 npm install
 
 Start the development server:
+
 npm run dev
