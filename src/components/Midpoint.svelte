@@ -33,6 +33,7 @@
   import Kakvealt from "../assets/kahvealt.png";
   import HardDeepkahve from "../assets/boşlukhardcoffe.png"
   import App from "../App.svelte";
+  
   </script>
 
 <main>
@@ -386,15 +387,18 @@ width: 100%;
 height: 100%;
 }
 
-.midcolortwo{
-  position: relative;
-  top:-300px;
-  -webkit-mask-image: url(src/assets/Midcolor.png);
-  mask-image: url(src/assets/Midcolor.svg);
-  -webkit-mask-repeat: no-repeat;
-  mask-repeat: no-repeat;    
-  z-index:1;
-}
+@import '../assets/Midcolor.png';
+@import '../assets/Midcolor.svg';
+
+  .midcolortwo {
+    position: relative;
+    top: -300px;
+    -webkit-mask-image: url('../assets/Midcolor.png'); /* Resmi buradan alıyoruz */
+    mask-image: url('../assets/Midcolor.svg'); /* SVG'yi buradan alıyoruz */
+    -webkit-mask-repeat: no-repeat;
+    mask-repeat: no-repeat;
+    z-index: 1;
+  }
 
 .midcolortwolite{
 position: relative;
